@@ -1,0 +1,1 @@
+import{j as e,p as r,x as t}from"./index-be930164.js";const s=()=>e.jsx(e.Fragment,{children:e.jsx(r,{position:"top-right",autoClose:2e3,hideProgressBar:!0,closeOnClick:!0,rtl:!1,draggable:!0,pauseOnHover:!0,theme:"colored",transition:t})});export{s as default};
