@@ -7,20 +7,13 @@ export const DIV = styled.div`
   align-items: center;
 `;
 export const H3 = styled.h3`
-  margin-bottom: 20px;
+  margin-bottom: 4px;
 `;
 export const INPUT_NAME = styled(TextField)`
   width: 240px;
 `;
 export const DIV_PHONE = styled.div`
   margin: 16px 0;
-`;
-export const DIV_BTN = styled.div`
-  /* display: flex;
-  align-items: flex-end;
-  justify-content: center;
-  width: 160px;
-  height: 62px; */
 `;
 
 export const BUTTON = styled.button`

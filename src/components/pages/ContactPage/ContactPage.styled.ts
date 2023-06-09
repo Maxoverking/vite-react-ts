@@ -29,7 +29,9 @@ export const ICON = styled(BsPlusCircleFill)`
     color: var(--lettuce-color);
   }
 `;
-export const H2 = styled.h2``;
+export const H2 = styled.h2`
+  font-family: "Varela Round";
+`;
 
 export const BUTTON = styled.button`
   display: flex;
@@ -37,5 +39,11 @@ export const BUTTON = styled.button`
 `;
 export const DIV_FILTER = styled.div`
   height: 70px;
-  margin-left: 16px;
+  margin: 0 16px;
+`;
+export const DIV_LOADER = styled.div`
+  display: flex;
+  justify-content: center;
+  margin-top: 16px;
+  height: 4px;
 `;

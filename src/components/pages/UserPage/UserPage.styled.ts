@@ -1,12 +1,14 @@
 import styled from "styled-components";
 import { SlLogout } from "react-icons/sl";
-// import { Link } from "react-router-dom";
 interface LogOutProps {
   isHover: boolean;
 }
 
 export const DIV = styled.div`
   width: 100px;
+`;
+export const H2 = styled.h2`
+  font-family: "Varela Round";
 `;
 
 export const BUTTON = styled.a`
@@ -36,6 +38,7 @@ export const BUTTON = styled.a`
   }
 `;
 export const LOGOUT = styled.button<LogOutProps>`
+  font-family: "Varela Round";
   position: absolute;
   right: ${({ isHover }) => (isHover ? "70%" : "0%")};
   width: 0%;

@@ -22,10 +22,7 @@ const PublicRoute = lazy(() => import("./Routes/PublicRoute"));
 
 const App: FC = () => {
   const dispatch = useAppDispatch();
-  const { user } = useAuthSelector();
   const { isLoginAlready } = useAuthSelector();
-
-  console.log("🚀  user:", user);
 
   useEffect(() => {
     dispatch(refreshUser());

@@ -1,6 +1,14 @@
+import { FcPrivacy, FcUnlock } from "react-icons/fc";
 import { ChangeEvent, FC, FormEvent, useState } from "react";
 import * as Yup from "yup";
-import { BUTTON, DIV, DIV_BTN, FORM, H2 } from "./RegisterForm.styled";
+import {
+  BUTTON,
+  DIV,
+  DIV_BTN,
+  FORM,
+  H2,
+  UNLOCK_BTN,
+} from "./RegisterForm.styled";
 import { TextField } from "@mui/material";
 import { validationSchemaRegister } from "../../helper/validationYup/validationYup";
 import { useAppDispatch } from "../../types/hooks";
@@ -11,6 +19,7 @@ const RegisterForm: FC = () => {
   const dispatch = useAppDispatch();
   const [formData, setFormData] = useState<RegisterFormValues>(registerForm);
   const [errors, setErrors] = useState<Partial<RegisterFormValues>>({});
+  const [showPassword, setShowPassword] = useState(true);
 
   const handleChange = (event: ChangeEvent<HTMLInputElement>) => {
     // console.log({ [event.target.name]: event.target.value });
@@ -31,7 +40,6 @@ const RegisterForm: FC = () => {
       setErrors({});
       setFormData(registerForm);
     } catch (validationErrors) {
-      console.log("RegisterForm ERROR");
       if (validationErrors instanceof Yup.ValidationError) {
         // Преобразование ошибок в удобный формат для отображения
         const formattedErrors: Partial<RegisterFormValues> = {};
@@ -44,6 +52,7 @@ const RegisterForm: FC = () => {
       }
     }
   };
+
   return (
     <>
       <DIV>
@@ -76,6 +85,7 @@ const RegisterForm: FC = () => {
           <TextField
             label="Password"
             variant="standard"
+            type={showPassword ? "password" : "text"}
             id="password"
             name="password"
             margin="dense"
@@ -85,6 +95,12 @@ const RegisterForm: FC = () => {
             error={!!errors.password}
             helperText={errors.password}
           />
+          <UNLOCK_BTN
+            type="button"
+            onClick={() => setShowPassword((prev) => !prev)}
+          >
+            {showPassword ? <FcPrivacy size={20} /> : <FcUnlock size={20} />}
+          </UNLOCK_BTN>
           <DIV_BTN>
             <BUTTON type="submit">Submit</BUTTON>
           </DIV_BTN>

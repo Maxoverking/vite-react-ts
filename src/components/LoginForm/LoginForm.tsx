@@ -1,3 +1,4 @@
+import { FcPrivacy, FcUnlock } from "react-icons/fc";
 import { useState } from "react";
 import * as Yup from "yup";
 import { validationSchemaLogin } from "../../helper/validationYup/validationYup";
@@ -8,7 +9,7 @@ import {
   BUTTON,
 } from "../RegisterForm/RegisterForm.styled";
 import { TextField } from "@mui/material";
-import { H2_Login } from "./LoginForm.styled";
+import { H2_LOGIN, UNLOCK_BTN } from "./LoginForm.styled";
 import { LoginFormValues, loginForm } from "../../types/user";
 import { useAppDispatch } from "../../types/hooks";
 import { logInUser } from "../../redux/auth/authOperation";
@@ -17,6 +18,7 @@ const LoginPage: React.FC = () => {
   const dispatch = useAppDispatch();
   const [loginFormData, setLoginData] = useState<LoginFormValues>(loginForm);
   const [errors, setErrors] = useState<Partial<LoginFormValues>>({});
+  const [showPassword, setShowPassword] = useState(true);
 
   const handleChange = (event: React.ChangeEvent<HTMLInputElement>) => {
     // console.log({ [event.target.name]: event.target.value });
@@ -56,7 +58,7 @@ const LoginPage: React.FC = () => {
   return (
     <>
       <DIV>
-        <H2_Login>Log in</H2_Login>
+        <H2_LOGIN>Log in</H2_LOGIN>
         <FORM onSubmit={handleSubmit}>
           <TextField
             label="Email"
@@ -74,6 +76,7 @@ const LoginPage: React.FC = () => {
             label="Password"
             variant="standard"
             id="password"
+            type={showPassword ? "password" : "text"}
             name="password"
             margin="dense"
             autoComplete="password"
@@ -82,6 +85,12 @@ const LoginPage: React.FC = () => {
             error={!!errors.password}
             helperText={errors.password}
           />
+          <UNLOCK_BTN
+            type="button"
+            onClick={() => setShowPassword((prev) => !prev)}
+          >
+            {showPassword ? <FcPrivacy size={20} /> : <FcUnlock size={20} />}
+          </UNLOCK_BTN>
           <DIV_BTN>
             <BUTTON type="submit">Submit</BUTTON>
           </DIV_BTN>

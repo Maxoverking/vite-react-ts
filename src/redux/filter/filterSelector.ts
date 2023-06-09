@@ -5,6 +5,6 @@ const filterSelector = (state: RootState) => state.filter;
 
 export const useFilterSelector = () => {
   return {
-    filterContact: useAppSelector(filterSelector),
+    filter: useAppSelector(filterSelector),
   };
 };

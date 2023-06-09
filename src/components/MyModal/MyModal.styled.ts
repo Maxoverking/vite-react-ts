@@ -23,11 +23,12 @@ export const Overlay = styled.div`
 `;
 
 export const ModalContainer = styled.div`
+  font-family: "Varela Round";
   background-color: white;
   padding: 20px;
   border-radius: 10px;
   width: 310px;
-  height: 260px;
+  height: 245px;
   /* max-width: calc(80vw - 340px);
   max-height: calc(80vh - 200px); */
 `;

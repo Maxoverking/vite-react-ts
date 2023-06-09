@@ -2,7 +2,7 @@ import { NewContact } from "./contacts";
 import { UserField } from "./user";
 
 export interface ContactsState {
-  item: NewContact[];
+  items: NewContact[];
   isLoading: string;
   error: null | string;
 }

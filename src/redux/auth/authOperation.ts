@@ -33,10 +33,8 @@ export const logInUser = createAsyncThunk(
     try {
       const { data } = await axiosRequest.post("/users/login", existUserData);
 
-      // console.log("🚀  data:", data);
       return data;
     } catch (error) {
-      // return thunkAPI.rejectWithValue(
       toast.error("This user does not exist please Register!");
       throw error;
       // );

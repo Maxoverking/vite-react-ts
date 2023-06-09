@@ -7,14 +7,16 @@ import { useAuthSelector } from "../../redux/auth/authSelector";
 import deepPurple from "@mui/material/colors/deepPurple";
 
 const Header: FC = () => {
+  const { user } = useAuthSelector();
   const { isLogin } = useAuthSelector();
-  // const { user } = useAuthSelector();
 
   return (
     <>
       <DIV>
         {isLogin ? (
-          <Avatar sx={{ bgcolor: deepPurple[800] }} />
+          <Avatar sx={{ bgcolor: deepPurple[800] }}>
+            {user.name?.slice(0, 1).toUpperCase()}
+          </Avatar>
         ) : (
           <H3 to="/">HOME</H3>
         )}

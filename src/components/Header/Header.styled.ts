@@ -14,8 +14,8 @@ export const DIV = styled.div`
   box-shadow: var(--header-shadow);
 `;
 export const H3 = styled(NavLink)`
-  font-weight: 700;
-  font-size: 26px;
+  font-family: "Titan One";
+  font-size: 25px;
   color: white;
   transition: var(--hover-transition);
   &:hover {
@@ -24,6 +24,9 @@ export const H3 = styled(NavLink)`
   &.active {
     color: var(--lettuce-color);
   }
+  @media (max-width: 480px) {
+    display: none;
+  }
 `;
 export const LI = styled.li`
   display: flex;
@@ -31,7 +34,7 @@ export const LI = styled.li`
   gap: 26px;
 `;
 export const BUTTON = styled(NavLink)`
-  font-weight: 700;
+  font-family: "Varela Round";
   border-radius: 10px;
   padding: 10px 28px;
   background-color: var(--orange-color);

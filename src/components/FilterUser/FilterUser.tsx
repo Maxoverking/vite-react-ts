@@ -2,14 +2,10 @@ import { TextField } from "@mui/material";
 import { ChangeEvent, FC, useState } from "react";
 import { useDispatch } from "react-redux";
 import { filterAction } from "../../redux/filter/filterSlice";
-import { useFilterSelector } from "../../redux/filter/filterSelector";
 
 const FilterUser: FC = () => {
   const dispatch = useDispatch();
-  const { filterContact } = useFilterSelector();
-  const [filters, setFilter] = useState("");
-
-  console.log("🚀  filterContact:", filterContact);
+  const [filter, setFilter] = useState("");
 
   const filterContacts = (event: ChangeEvent<HTMLInputElement>) => {
     const { value } = event.target;
@@ -19,10 +15,10 @@ const FilterUser: FC = () => {
 
   return (
     <TextField
-      label="Filter contact"
+      label="Filter contact by name"
       variant="standard"
       name="filter"
-      value={filters}
+      value={filter}
       onChange={filterContacts}
       size="small"
     />

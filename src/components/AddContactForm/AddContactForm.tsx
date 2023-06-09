@@ -1,43 +1,52 @@
 import { ChangeEvent, FC, useState } from "react";
 import * as Yup from "yup";
+import { nanoid } from "nanoid";
 import {
   BUTTON,
   DIV,
-  DIV_BTN,
   DIV_PHONE,
   H3,
   INPUT_NAME,
 } from "./AddContactForm.styled";
-import ReactPhoneInput from "react-phone-input-2";
 import { validationContsctSchema } from "../../helper/validationYup/validationYup";
 import { modalProps } from "../../types/modal";
-import { NewContact } from "../../types/contacts";
-import { useDispatch } from "react-redux";
-import { nanoid } from "nanoid";
+import ReactPhoneInput from "react-phone-input-2";
+import { addContacts } from "../../redux/contacts/contactOperation";
+import { useAppDispatch } from "../../types/hooks";
+import { useContactSelector } from "../../redux/contacts/contactSelector";
+import { toast } from "react-toastify";
 
 const ContactForm: FC<modalProps> = ({ modalShow }) => {
-  const dispatch = useDispatch();
+  const dispatch = useAppDispatch();
+  const { items } = useContactSelector();
   const [name, setName] = useState("");
-  const [phone, setPhone] = useState("");
+  const [number, setPhone] = useState("");
   const [nameError, setNameError] = useState("");
 
   const handleNameChange = (event: ChangeEvent<HTMLInputElement>) => {
     setName(event.target.value);
   };
 
-  const handlePhoneChange = (phone: string) => {
-    setPhone(phone);
+  const handlePhoneChange = (number: string) => {
+    setPhone(number);
   };
 
   const handleSubmit = async () => {
+    const existContact = items.find((item) => item.name === name);
+    if (existContact?.name === name) {
+      toast.warning(`Name ${name} aready in your PHONEBOOK`, {
+        autoClose: 3000,
+        pauseOnHover: true,
+      });
+      return;
+    }
     try {
       await validationContsctSchema.validate({ name });
-      const newContacts: NewContact = { name, phone, id: nanoid() };
-      dispatch({ type: "ADD_CONTACT", payload: newContacts });
-      console.log("🚀  newContacts:", newContacts);
+      // const newContacts: NewContact = { name, number, id: nanoid() };
+
+      dispatch(addContacts({ name, number, id: nanoid() }));
 
       resetForm();
-      modalShow();
     } catch (error: unknown) {
       if (error instanceof Yup.ValidationError) {
         setNameError(error.message);
@@ -47,6 +56,7 @@ const ContactForm: FC<modalProps> = ({ modalShow }) => {
   const resetForm = () => {
     setName("");
     setPhone("");
+    modalShow();
   };
 
   return (
@@ -66,14 +76,14 @@ const ContactForm: FC<modalProps> = ({ modalShow }) => {
         <ReactPhoneInput
           onChange={handlePhoneChange}
           inputProps={{
-            name: "phone",
+            name: "number",
             required: true,
           }}
         />
       </DIV_PHONE>
-      <DIV_BTN>
+      <div>
         <BUTTON onClick={handleSubmit}>ADD CONTACT</BUTTON>
-      </DIV_BTN>
+      </div>
     </DIV>
   );
 };
