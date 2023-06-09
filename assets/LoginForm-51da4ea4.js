@@ -1,6 +1,0 @@
-import{u as h,r as d,j as a,d as u}from"./index-be930164.js";import{T as p,a as x,V as f}from"./validationYup-d3731717.js";import{l as j,D as w,F as E,a as b,B as v}from"./user-6f30b504.js";import{s as D}from"./styled-components.browser.esm-8968f678.js";import"./createSvgIcon-f49a5a1e.js";const T=D.h2`
-  font-family: "Rodoto";
-  font-weight: 700;
-  margin-top: 20px;
-  margin-bottom: 20px;
-`,L=()=>{const c=h(),[s,n]=d.useState(j),[e,i]=d.useState({}),l=r=>{const{name:t,value:o}=r.target;n({...s,[t]:o})},g=async r=>{r.preventDefault();try{await x.validate(s,{abortEarly:!1}),c(u(s)),n({email:"",password:""}),i({})}catch(t){if(console.log("objectERROR"),t instanceof f){const o={};t.inner.forEach(m=>{o[m.path]=m.message}),i(o)}}};return a.jsx(a.Fragment,{children:a.jsxs(w,{children:[a.jsx(T,{children:"Log in"}),a.jsxs(E,{onSubmit:g,children:[a.jsx(p,{label:"Email",variant:"standard",id:"email",name:"email",margin:"dense",autoComplete:"email",value:s.email,onChange:l,error:!!e.email,helperText:e.email}),a.jsx(p,{label:"Password",variant:"standard",id:"password",name:"password",margin:"dense",autoComplete:"password",value:s.password,onChange:l,error:!!e.password,helperText:e.password}),a.jsx(b,{children:a.jsx(v,{type:"submit",children:"Submit"})})]})]})})};export{L as default};
