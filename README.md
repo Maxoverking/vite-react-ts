@@ -25,7 +25,7 @@ To get start application, follow these steps:
   npm i
   npm run dev
   ```
-### Application architecture
+## Application architecture
 
 
 ## Used Libraries and Technologies
