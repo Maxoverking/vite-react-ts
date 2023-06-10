@@ -58,3 +58,7 @@ npm run dev
 - nanoid
 - Responsive design
 - Use gh-pages and deploy
+
+## Jokes Card
+![Jokes Card](https://readme-jokes.vercel.app/api)
+
