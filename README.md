@@ -28,15 +28,16 @@ npm run dev
 
 ## Application architecture
 
-- [main.tsx](src/main.tsx);
-- [App.tsx](src/App.tsx);
-- [Components](src/components);
-- [Register Form](src/components/RegisterForm/RegisterForm.tsx);
-- [Login Form](src/components/LoginForm/LoginForm.tsx);
-- [pages](src/components/pages);
+- [main.tsx](src/main.tsx)
+- [App.tsx](src/App.tsx)
+- [Components](src/components)
+- [Register Form](src/components/RegisterForm/RegisterForm.tsx)
+- [Login Form](src/components/LoginForm/LoginForm.tsx)
+- [pages](src/components/pages)
 - [redux](src/redux);
-- [servises](src/redux/servises/servises.ts);
-- [types](src/types);
+- [servises](src/redux/servises/servises.ts)
+- [authThunk](src/redux/auth/authOperation.ts);
+- [types](src/types)
 
 ## Used Libraries and Technologies
 
