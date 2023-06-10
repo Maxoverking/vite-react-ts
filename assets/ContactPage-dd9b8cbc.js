@@ -1,4 +1,4 @@
-import{r as Re,h as tr,i as gt,a as Tt,j as B,Q as rr,k as nr,m as ar,u as or,n as ir,o as ur,c as Le,p as cr,S as sr}from"./index-f81cb8fd.js";import{W as lr,s as fe}from"./styled-components.browser.esm-c7beb4c7.js";import{T as Gt,b as fr,V as dr}from"./validationYup-abbc550c.js";import{G as Ut}from"./createSvgIcon-f26cbbb5.js";import{a as pr,u as hr}from"./animation-a94f7b8d.js";const mr=lr`
+import{r as Re,g as tr,h as gt,a as Tt,j as B,Q as rr,i as nr,k as ar,u as or,m as ir,n as ur,c as Le,o as cr,S as sr}from"./index-cc0e647e.js";import{W as lr,s as fe}from"./styled-components.browser.esm-ebe17c1e.js";import{T as Gt,b as fr,V as dr}from"./validationYup-8aa1741d.js";import{G as Ut}from"./iconBase-392aa3e6.js";import{a as pr,u as hr}from"./animation-a94f7b8d.js";const mr=lr`
   from {
     opacity: 0;
   }
@@ -63,11 +63,13 @@ import{r as Re,h as tr,i as gt,a as Tt,j as B,Q as rr,k as nr,m as ar,u as or,n 
   justify-content: center;
   height: fit-content;
 `,Mr=fe.div`
-  display: flex;
   align-items: center;
   height: 30px;
   margin-top: 16px;
   gap: 20px;
+  @media (min-width: 540px) {
+    display: flex;
+  }
 `,Rr=fe(Dr)`
   width: 32px;
   height: 32px;
@@ -95,6 +97,9 @@ import{r as Re,h as tr,i as gt,a as Tt,j as B,Q as rr,k as nr,m as ar,u as or,n 
   align-items: center;
 `,Gr=fe.div`
   margin: 20px 40px;
+  @media (max-width: 540px) {
+    margin-top: 80px;
+  }
 `,Ur=fe.ul`
   display: grid;
   grid-template-rows: 1fr;
