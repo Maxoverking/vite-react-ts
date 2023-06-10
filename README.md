@@ -1,4 +1,4 @@
-## REACT-TypeScript-PHONEBOOK Vite
+## REACT-TypeScript-PHONEBOOK _Vite_
 
 ### Phonebook app 📱
 
