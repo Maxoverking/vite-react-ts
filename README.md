@@ -13,7 +13,7 @@ To create and save your contacts, you can also filter contacts by name and delet
 ![Application interface Add Contact Modal](src/images/3.png)
 ![Application interface Your Contact](src/images/4.png)
 
-## Installation and Usage 🖥️ 🚀
+## Quick Start 🖥️ 🚀
 
 To get start application, follow these steps:
 
@@ -44,6 +44,7 @@ npm run dev
 ## Used Libraries and Technologies
 
 - React
+- React Hooks
 - React Router
 - Redux-Toolkit
 - Redux Persist
@@ -56,3 +57,4 @@ npm run dev
 - React Toastify
 - nanoid
 - Responsive design
+- Use gh-pages and deploy
