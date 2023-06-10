@@ -1,10 +1,8 @@
 import { FC, Suspense } from "react";
-import { DIV, H3, BUTTON, LI } from "./Header.styled";
+import { DIV, H3, BUTTON, LI, AVATAR, H2 } from "./Header.styled";
 import { Outlet } from "react-router-dom";
 import UserPage from "../pages/UserPage/UserPage";
-import { Avatar } from "@mui/material";
 import { useAuthSelector } from "../../redux/auth/authSelector";
-import deepPurple from "@mui/material/colors/deepPurple";
 
 const Header: FC = () => {
   const { user } = useAuthSelector();
@@ -14,9 +12,9 @@ const Header: FC = () => {
     <>
       <DIV>
         {isLogin ? (
-          <Avatar sx={{ bgcolor: deepPurple[800] }}>
-            {user.name?.slice(0, 1).toUpperCase()}
-          </Avatar>
+          <AVATAR>
+            <H2>{user.name?.slice(0, 1).toUpperCase()}</H2>
+          </AVATAR>
         ) : (
           <H3 to="/">HOME</H3>
         )}

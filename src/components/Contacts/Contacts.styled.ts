@@ -7,6 +7,9 @@ const DISP_FLEX_ALING_ITEM_CENTER = `
 
 export const DIV_GRID = styled.div`
   margin: 20px 40px;
+  @media (max-width: 540px) {
+    margin-top: 80px;
+  }
 `;
 
 export const Ul = styled.ul`

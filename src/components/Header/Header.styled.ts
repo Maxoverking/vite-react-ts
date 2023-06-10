@@ -33,6 +33,24 @@ export const LI = styled.li`
   align-items: center;
   gap: 26px;
 `;
+export const H2 = styled.h2`
+  font-family: "Varela Round";
+  color: var(--white);
+`;
+
+export const AVATAR = styled.div`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 40px;
+  height: 40px;
+  background: #4527a0;
+  border-radius: 100px;
+  @media (max-width: 400px) {
+    display: none;
+  }
+`;
+
 export const BUTTON = styled(NavLink)`
   font-family: "Varela Round";
   border-radius: 10px;

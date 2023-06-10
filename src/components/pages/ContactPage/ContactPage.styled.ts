@@ -13,11 +13,13 @@ export const DIV = styled.div`
 `;
 
 export const DIV_NAV = styled.div`
-  display: flex;
   align-items: center;
   height: 30px;
   margin-top: 16px;
   gap: 20px;
+  @media (min-width: 540px) {
+    display: flex;
+  }
 `;
 export const ICON = styled(BsPlusCircleFill)`
   width: 32px;

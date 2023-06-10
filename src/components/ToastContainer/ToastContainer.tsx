@@ -5,6 +5,7 @@ const MyToastContainer = () => {
     <>
       <ToastContainer
         position="top-right"
+        style={{ width: "300px" }}
         autoClose={1500}
         hideProgressBar={true}
         closeOnClick
