@@ -13,7 +13,7 @@ To create and save your contacts, you can also filter contacts by name and delet
 ![Application interface Add Contact Modal](src/images/3.png)
 ![Application interface Your Contact](src/images/4.png)
 
-## Installation and Usage  🖥️  🚀
+## Installation and Usage 🖥️ 🚀
 
 To get start application, follow these steps:
 
@@ -21,24 +21,35 @@ To get start application, follow these steps:
 2. Open the terminal and navigate to the project directory.
 3. Run the following commands:
 
-  ```
-  npm i
-  npm run dev
-  ```
+```
+npm i
+npm run dev
+```
+
 ## Application architecture
 
+- [main.tsx](src/main.tsx);
+- [App.tsx](src/App.tsx);
+- [Components](src/components);
+- [Register Form](src/components/RegisterForm/RegisterForm.tsx);
+- [Login Form](src/components/LoginForm/LoginForm.tsx);
+- [pages](src/components/pages);
+- [redux](src/redux);
+- [servises](src/redux/servises/servises.ts);
+- [types](src/types);
 
 ## Used Libraries and Technologies
-   - React
-   - React Router 
-   - Redux-Toolkit
-   - Redux Persist 
-   - Styled Components 
-   - Material-UI 
-   - Axios
-   - Yup 
-   - React Icons 
-   - React Loader Spinner 
-   - React Toastify 
-   - nanoid 
-   - Responsive design
+
+- React
+- React Router
+- Redux-Toolkit
+- Redux Persist
+- Styled Components
+- Material-UI
+- Axios
+- Yup
+- React Icons
+- React Loader Spinner
+- React Toastify
+- nanoid
+- Responsive design
