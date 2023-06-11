@@ -74,4 +74,3 @@ export const BUTTON = styled(NavLink)`
     background-color: var(--lettuce-color);
   }
 `;
-export const BUTTONs = styled(NavLink)``;
