@@ -1,8 +1,18 @@
 import { FC, Suspense } from "react";
-import { DIV, H3, BUTTON, LI, AVATAR, H2 } from "./Header.styled";
+import {
+  DIV,
+  H3,
+  BUTTON,
+  LI,
+  AVATAR,
+  H2,
+  DIV_HOME,
+  DIV_THEME,
+} from "./Header.styled";
 import { Outlet } from "react-router-dom";
 import UserPage from "../pages/UserPage/UserPage";
 import { useAuthSelector } from "../../redux/auth/authSelector";
+import ButtonTheme from "../ButtonTheme/ButtonTheme.tsx";
 
 const Header: FC = () => {
   const { user } = useAuthSelector();
@@ -12,11 +22,21 @@ const Header: FC = () => {
     <>
       <DIV>
         {isLogin ? (
-          <AVATAR>
-            <H2>{user.name?.slice(0, 1).toUpperCase()}</H2>
-          </AVATAR>
+          <DIV_HOME>
+            <DIV_THEME>
+              <ButtonTheme />
+            </DIV_THEME>
+            <AVATAR>
+              <H2>{user.name?.slice(0, 1).toUpperCase()}</H2>
+            </AVATAR>
+          </DIV_HOME>
         ) : (
-          <H3 to="/">HOME</H3>
+          <DIV_HOME>
+            <DIV_THEME>
+              <ButtonTheme />
+            </DIV_THEME>
+            <H3 to="/">HOME</H3>
+          </DIV_HOME>
         )}
         <ul>
           {isLogin ? (

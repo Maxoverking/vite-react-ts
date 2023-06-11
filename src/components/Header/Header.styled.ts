@@ -28,6 +28,14 @@ export const H3 = styled(NavLink)`
     display: none;
   }
 `;
+export const DIV_HOME = styled.div`
+  display: flex;
+  gap: 18px;
+`;
+export const DIV_THEME = styled.div`
+  display: flex;
+  align-items: center;
+`;
 export const LI = styled.li`
   display: flex;
   align-items: center;

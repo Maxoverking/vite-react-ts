@@ -8,10 +8,7 @@ import { setToken } from "./authSlice";
 
 export const registerUser = createAsyncThunk(
   "auth/register",
-  async (
-    newUser: RegisterFormValues
-    // thunkAPI
-  ): Promise<AuthState> => {
+  async (newUser: RegisterFormValues): Promise<AuthState> => {
     try {
       const response = await axiosRequest.post("/users/signup", newUser);
       toast.success(`WELCOME  ${response.data.user.name}`);
@@ -26,10 +23,7 @@ export const registerUser = createAsyncThunk(
 
 export const logInUser = createAsyncThunk(
   "auth/login",
-  async (
-    existUserData: LoginFormValues
-    // thunkAPI
-  ): Promise<AuthState> => {
+  async (existUserData: LoginFormValues): Promise<AuthState> => {
     try {
       const { data } = await axiosRequest.post("/users/login", existUserData);
 
@@ -37,7 +31,6 @@ export const logInUser = createAsyncThunk(
     } catch (error) {
       toast.error("This user does not exist please Register!");
       throw error;
-      // );
     }
   }
 );

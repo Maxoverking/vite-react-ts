@@ -5,6 +5,7 @@ export const H2_LOGIN = styled.h2`
   font-weight: 700;
   margin-top: 20px;
   margin-bottom: 20px;
+  color: var(--form-title);
 `;
 export const UNLOCK_BTN = styled.button`
   right: 14%;

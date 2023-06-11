@@ -27,6 +27,7 @@ export const H2 = styled.h2`
   font-family: "Varela Round";
   font-weight: 700;
   margin-top: 10px;
+  color: var(--form-title);
 `;
 export const FORM = styled.form`
   ${DiFx_FxDir_COLUMN}

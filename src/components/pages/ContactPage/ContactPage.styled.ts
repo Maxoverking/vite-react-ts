@@ -33,6 +33,7 @@ export const ICON = styled(BsPlusCircleFill)`
 `;
 export const H2 = styled.h2`
   font-family: "Varela Round";
+  color: var(--form-title);
 `;
 
 export const BUTTON = styled.button`
