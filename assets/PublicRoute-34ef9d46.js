@@ -1,1 +1,0 @@
-import{b as i,j as e,y as u}from"./index-cc0e647e.js";const n=({component:t,redirectTo:o="/"})=>{const{isLogin:s,isLoginAlready:r}=i();return!s&&!r?e.jsx(u,{to:o,replace:!0}):e.jsx(t,{})};export{n as default};

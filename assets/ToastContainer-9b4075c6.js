@@ -1,0 +1,1 @@
+import{j as t,w as e,x as r}from"./index-30c81205.js";const s=()=>t.jsx(t.Fragment,{children:t.jsx(e,{position:"top-right",style:{width:"300px"},autoClose:1500,hideProgressBar:!0,closeOnClick:!0,rtl:!1,draggable:!0,pauseOnHover:!0,theme:"colored",transition:r})});export{s as default};
