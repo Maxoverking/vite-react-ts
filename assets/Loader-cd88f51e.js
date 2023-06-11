@@ -1,4 +1,4 @@
-import{r as x,c as o,j as y}from"./index-30c81205.js";import{s as D}from"./styled-components.browser.esm-bd3a865c.js";import{a as P,u as E}from"./animation-a94f7b8d.js";const L=D.div`
+import{r as x,c as o,j as y}from"./index-2fa659a4.js";import{s as D}from"./styled-components.browser.esm-795fca54.js";import{a as P,u as E}from"./animation-a94f7b8d.js";const L=D.div`
   display: flex;
   height: 100vh;
   justify-content: center;
